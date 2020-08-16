@@ -1,17 +1,18 @@
 <?php
 
-//$modx->loadClass('modPlugin');
-//$modx->loadClass('modPluginEvent');
-//var_dump($modx->map['modPlugin']);
-//var_dump($modx->map['modPluginEvent']);
 $pconfig=[
-    'events'=>[
+    /*'events'=>[
         'MyCustomEvent'=>['groupname'=>'Sample CMP']
-    ],
+    ],*/
     'plugins'=>[
-        'Sample'=>[
-            'description'=>'Sapmle of plugin',
-            'events'=>['OnLoadWebDocument','MyCustomEvent']
+        'PGenerator'=>[
+            'events'=>[
+                'OnResourceTVFormRender',
+                'OnDocFormSave',
+                'OnLoadWebDocument',
+                'OnResourceDelete',
+                'OnResourceUndelete',
+            ]
         ],
     ]
 ];

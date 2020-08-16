@@ -27,5 +27,8 @@ $config['data_options']=[
     'modSnippet'=>[
         'search_by'=>['name'],
     ],
+    'modTemplateVar'=>[
+        'search_by'=>['name'],
+    ],
 ];
 

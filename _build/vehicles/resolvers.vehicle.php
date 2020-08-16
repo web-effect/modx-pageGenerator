@@ -3,7 +3,7 @@ if(!class_exists('modxVehicleResolver')){
     class modxVehicleResolver{
         public $modx=null;
         public $service=null;
-        
+        public $errors=[];
         
         public function __construct(&$modx,$options,&$object){
             $this->modx=$modx;
@@ -47,6 +47,16 @@ if(!class_exists('modxVehicleResolver')){
         }
         public function uninstall(){
             
+        }
+        public function addError($msg){
+            $this->errors[]=$msg;
+            $this->modx->log(LOG_LEVEL_ERROR,$msg);
+        }
+        public function addMessage($msg){
+            $this->modx->log(LOG_LEVEL_INFO,$msg);
+        }
+        public function hasErrors(){
+            return !empty($this->errors);
         }
     }
     

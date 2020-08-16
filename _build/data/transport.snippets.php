@@ -1,8 +1,11 @@
 <?php
 
 $sconfig=[
-    'sampleSnippet'=>[
-        'description'=>'SampleComponent snippet',
+    'isGenerator'=>[
+        'description'=>'Return true if resource is generator',
+    ],
+    'getGenerated'=>[
+        'description'=>'Return json of fields for generated resource by generator and root id',
     ],
 ];
 

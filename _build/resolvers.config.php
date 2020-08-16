@@ -22,10 +22,22 @@ $config['component']['resolvers']=array_merge_recursive($config['component']['re
                 'source' => $config['resolvers'].'setupoptions.resolver.php',
             ]
         ],
-        'model'=>[
+        /*'model'=>[
             'type'=>'php',
             'options'=>[
                 'source' => $config['resolvers'].'model.resolver.php',
+            ]
+        ]*/
+        'packages'=>[
+            'type'=>'php',
+            'options'=>[
+                'source' => $config['resolvers'].'packages.resolver.php',
+            ]
+        ],
+        'migx'=>[
+            'type'=>'php',
+            'options'=>[
+                'source' => $config['resolvers'].'migx.resolver.php',
             ]
         ]
     ],
